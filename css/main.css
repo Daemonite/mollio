@@ -1,12 +1,25 @@
+/*
+LEGAL
+=====
+Copyright: Daemon Pty Limited 2006, http://www.daemon.com.au
+Community: Mollio http://www.mollio.org $
+License: Released Under the "Common Public License 1.0", 
+http://www.opensource.org/licenses/cpl.php
+License: Released Under the "Creative Commons License", 
+http://creativecommons.org/licenses/by/2.5/
+License: Released Under the "GNU Creative Commons License", 
+http://creativecommons.org/licenses/GPL/2.0/
+*/
+
 /* THE BIG GUYS */
 * {margin:0;padding:0}
-body {padding: 0 0 20px;background: #dde3ec;color:#333;font:83%/1.5 arial,tahoma,verdana,sans-serif}
+body {padding: 0 0 20px;background: #fff url("images/body_bg.gif") repeat-x 0 100%;color:#333;font:83%/1.5 arial,tahoma,verdana,sans-serif}
 
 /* LINKS */
 a,a:link,a:link,a:link,a:hover {background:transparent;text-decoration:underline;cursor:pointer} 
-a:link {color:#1855ad} 
+a:link {color:#c00} 
 a:visited {color:#999} 
-a:hover,a:active {color:#c00} 
+a:hover,a:active {color:#069} 
 
 /* FORMS */
 form {margin: 0 0 1.5em}
@@ -19,9 +32,9 @@ label br {clear:left}
 	input.f-submit {padding: 1px 3px;background:#666;color:#fff;font-weight:bold;font-size:96%}
 	
 	/* FORMS - f-wrap-1 - simple form, headings on left, form elements on right */
-	form.f-wrap-1 {width:100%;padding: .5em 0;border-left: 1px solid #7d99ce;border-bottom: 1px solid #7d99ce;background: #fff url("images/featurebox_bg.gif") no-repeat 100% 0;position:relative}
+	form.f-wrap-1 {width:100%;padding: .5em 0;background: #f6f6f6 url("images/featurebox_bg.gif") no-repeat 100% 100%;border-top: 1px solid #d7d7d7;position:relative}
 		form.f-wrap-1 fieldset {width:auto;margin: 0 1em}
-		form.f-wrap-1 h3 {margin:0 0 .6em;font: bold 155% arial;border-bottom: 1px solid #c9d7f0;color:#de4900}
+		form.f-wrap-1 h3 {margin:0 0 .6em;font: bold 155% arial;color:#c00}
 		form.f-wrap-1 label {clear:left;float:left;width:100%;border-top: 1px solid #fff}
 		
 		/* hide from IE mac \*/
@@ -31,9 +44,9 @@ label br {clear:left}
 		form.f-wrap-1 label input, form.f-wrap-1 label textarea, form.f-wrap-1 label select {width:15em;float:left;margin-left:10px}
 		
 		form.f-wrap-1 label b {float:left;width:8em;line-height: 1.7;display:block;position:relative}
-		form.f-wrap-1 label b .req {color:#de4900;font-size:150%;font-weight:normal;position:absolute;top:-.1em;line-height:1;left:-.4em;width:.3em;height:.3em}
-		form.f-wrap-1 div.req {color:#666;font-size:96%;font-weight:normal;position:absolute;top:.4em;right:1em;left:auto;width:13em;text-align:right}
-		form.f-wrap-1 div.req b {color:#de4900;font-size:140%}
+		form.f-wrap-1 label b .req {color:#c00;font-size:150%;font-weight:normal;position:absolute;top:-.1em;line-height:1;left:-.4em;width:.3em;height:.3em}
+		form.f-wrap-1 div.req {color:#666;font-size:96%;font-weight:normal;position:absolute;top:.4em;right:.4em;left:auto;width:13em;text-align:right}
+		form.f-wrap-1 div.req b {color:#c00;font-size:140%}
 		form.f-wrap-1 label select {width: 15.5em}
 		form.f-wrap-1 label textarea.f-comments {width: 20em}
 		form.f-wrap-1 div.f-submit-wrap {padding: 5px 0 5px 8em}
@@ -84,68 +97,66 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 .clear {clear:both;position:relative;font-size:0px;height:0px;line-height:0px} 
 
 /* LAYOUT - HEADER */
-#header {background: #fff url("images/header_1_bg.jpg") no-repeat 100% 0;margin: 0 0 15px;height:136px;position:relative;z-index:99999999;border: 1px solid #fff}
+#header {background: #666 url("images/sprites.gif") repeat-x 0 100%;margin: 0 0 25px;padding: 0 0 8px}
 
-	#header #logo {float:left;width:125px;padding: 1px 0 5px}
-	#header #logo img {margin: 10px 0 0 20px;display:block}
-	
-	#util-nav {background:#777;clear:both;text-align:right;padding: 0 11px 0 10px;border-top: 1px solid #fff;border-bottom: 1px solid #fff}
-	#util-nav h4 {float:left;width:50%;text-align:left;font-size:12px;color:#fff;letter-spacing:0}
-	#util-nav h4, #util-nav p {margin:0;border:none}
-	#util-nav p a:link, #util-nav p a:visited, #util-nav p a:hover, #util-nav p a:active {text-decoration:none;color:#fff;margin-left:15px;font-size:11px;font-weight:bold;position:relative;top:-2px}
-	#util-nav p a:hover {text-decoration:underline}
+	#header #site-name {font: 265% arial;letter-spacing: -.05em;margin:0 0 0 40px;padding:3px 0;color:#ccc;border:none}
 	
 	/* NAV - top horizontal nav */
 	#nav, #nav ul {padding: 0;margin: 0;list-style: none}
-	#nav {font-weight:bold;height:1.75em;font: bold 86% arial;margin: 5px 0 0;clear:both;background:#1855ad;position:absolute;bottom:0;right:0;z-index:99999999}
-	#nav li {position:relative;background: #1855ad;float: left;width: 10em;display:block;margin: 0;border-left: 1px solid #fff;padding:0}
-	#nav a, #nav a:link, #nav a:visited, #nav a:hover, #nav a:active {text-decoration:none;cursor:pointer;color:#fff;display: block;padding: 2px 10px}
-	#nav a:hover {background:#2273e7;color:#fff}
+	#nav {font-weight:bold;height:2.09em;font: bold 96% arial;margin: 0 105px 0 40px}
+	#nav li {position:relative;background: #999;float: left;width: 10em;display:block;margin: 0;border-bottom: 3px solid #666;border-right: 3px solid #252525;padding:0}
+	#nav a, #nav a:link, #nav a:visited, #nav a:hover, #nav a:active {text-decoration:none;cursor:pointer;color:#fff;display: block;padding: 4px 10px 2px}
+	#nav a:hover {color:#000}
 	
-	#nav li ul {background: #1855ad;width:13.8em;position: absolute;font-weight:normal;left: -999em}
+	#nav li ul {border-left: 1px solid #c00;background: #f6f6f6 url("images/featurebox_bg.gif") no-repeat 100% 100%;width:15.8em;font-size:90%;margin-top:3px;position: absolute;font-weight:normal;left: -999em}
 	#nav li:hover ul, #nav li.sfhover ul {left: 0;z-index:99999}
 	
 	#nav li li {background:none;float:none;border:none;border: 1px solid #999;border-top:1px solid #fff;border-right:none;border-left:none;padding-left:0}
 	#nav li li.last {border-bottom:none}
-	#nav li li a, #nav li li a:link, #nav li li a:visited, #nav li li a:hover {color:#fff;padding: 3px 10px 2px;width:12em}
-	#nav li li a:hover {color:#fff;background:#2273e7}
+	#nav li li a, #nav li li a:link, #nav li li a:visited, #nav li li a:hover {color:#000;padding: 3px 10px 2px;width:14em}
+	#nav li li a:hover {color:#fff;background:#c00}
 	
-	#nav li.active {background: #2273e7}
+	#nav li.active {background: #c00;border-bottom: 3px solid #c00}
+	#nav li.active ul {border:none;background: #c00 url("images/featurebox2_bg.gif") no-repeat 100% 100%}
+	#nav li.active a:link, #nav li.active a:visited, #nav li.active a:hover, #nav li.active a:active {}
+	#nav li.active a:hover {color:#000}
 	
-	#nav li.active li.active a:link, #nav li.active li.active a:visited, #nav li.active li.active a:hover, #nav li.active li.active a:active {color:#fff;font-weight:bold}
+	#nav li.active li {border:none;border-top: 1px solid #c15c5c;border-bottom: 1px solid #870000}
+	#nav li.active li.last {border-bottom: none}
+	#nav li.active li a:link, #nav li.active li a:visited, #nav li.active li a:hover, #nav li.active li a:active {color:#fff}
+	#nav li.active li a:hover {background: #666 url("images/sprites.gif") repeat-x 0 99%;color:#fff}
+	
+	#nav li.active li.active a:link, #nav li.active li.active a:visited, #nav li.active li.active a:hover, #nav li.active li.active a:active {color:#fff;font-weight:bold;background: #666 url("images/sprites.gif") repeat-x 0 99%}
 
 	/* hide from IE mac \*/
 	#nav li {width:auto}
 	/* end hiding from IE5 mac */
 	
 	/* SEARCH */
-	#search {color:#fff;font-weight:bold;position:absolute;top:10px;right:0;left:auto;width:15em}
+	#search {color:#fff;font-weight:bold;position:absolute;top:10px;right:110px;left:auto;width:18em}
 	#search form {margin:0}
-	#search input {width:13.5em;font-size:76%;padding: 2px 3px;border: 2px solid #0058AB}
-	#search label {padding:5px 0 0}
-	#search label b {display:block}
-	#search input.f-submit {width:auto;padding: 1px 4px;text-align:center;color:#0058AB;background:#fff}
+	#search input {width:8em;margin: 0 0 -1px;height:1.2em}
+	#search label {padding:5px 0 0;display:inline}
+	#search input.f-submit {width:auto;font-size:81%;margin:0 0 -.15em;height:1.95em}
 	
 	/* POWERED BY - mollio logo in this case */
 	#poweredby {width:96px;height:63px;position:absolute;top:-102px;right:0}
 
 /* LAYOUT - main body of page */
-#wrap {width:770px;margin: 0 auto;position:relative;background:#fff;border: 1px solid #c8d4e5;border-top:none}
+#wrap {min-width:770px;max-width:1200px;margin: 0 auto;position:relative}
 #content-wrap {position:relative;width:100%}
-	#utility {position:absolute;top:0;left:18px;width:165px;padding-bottom: 40px;background:#fff}
-	#sidebar {position:absolute;top:0;right:18px;width:180px;padding-bottom: 40px;font-size:86%}
+	#utility {position:absolute;top:0;left:25px;width:165px;border-top: 5px solid #999;padding-bottom: 40px}
+	#sidebar {position:absolute;top:0;right:25px;width:20%;border-top: 5px solid #999;padding-top: 1px;padding-bottom: 40px}
 
-#content {margin: 0 25px;padding-top:10px}
+#content {margin: 0 50px}
 	#content #breadcrumb {margin-top:-5px;font-size:93%;font-weight:bold}
 	#content #breadcrumb a:link, #content #breadcrumb a:visited {text-decoration:none}
 	#content #breadcrumb a:hover, #content #breadcrumb a:active {text-decoration:underline}
 	
-	.featurebox {color:#333;padding: 15px 20px 20px;border-left: 1px solid #7d99ce;border-bottom: 1px solid #7d99ce;margin: 0 0 1.5em;background: #fff url("images/featurebox_bg.gif") no-repeat 100% 0}
-	.featurebox p, .featurebox h1, .featurebox h2, .featurebox h3, .featurebox h4, .featurebox h5, .featurebox h6 {margin: 0 0 .3em;border-bottom: 1px solid #c9d7f0;color:#de4900}
+	.featurebox {color:#333;padding: 15px 20px 20px;border-top: 1px solid #d7d7d7;margin: 0 0 1.5em;background: #f6f6f6 url("images/featurebox_bg.gif") no-repeat 100% 100%}
+	.featurebox p, .featurebox h1, .featurebox h2, .featurebox h3, .featurebox h4, .featurebox h5, .featurebox h6 {margin: 0 0 .3em;border-bottom: 1px solid #c00;color:#c00}
 	.featurebox p {border:none;margin: 0 0 1em;color:#444}
 	.featurebox a {font-weight:bold}
-	
-	#sidebar .featurebox {padding: 5px 10px 10px}
 
 	.thumbnail {margin: 0 0 0 10px;position:relative;z-index:9999;border: 1px solid #eee;float:right;width:100px;padding:5px;background:#fff}
 	.thumbnail img {border: 1px solid #000}
@@ -168,11 +179,11 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 	#resultslist-wrap dd.filetype, #resultslist-wrap dd.date {color:#999;display:inline;padding-right:.5em}
 	
 	/* TABLES */
-	.table1 {border: 2px solid #0b469c;border-collapse:collapse;width:100%}
+	.table1 {border: 2px solid #900;border-collapse:collapse;width:100%}
 		.table1 td {background: #fff url("images/sprites.gif") repeat-x 0 -1600px;padding:3px;border: 1px solid #fff}
 		.table1 th {text-align:left;border: 1px solid #fff}
-		.table1 thead th {color:#fff;font-size:145%;background: #0b469c url("images/sprites.gif") repeat-x 0 -1300px;padding: 2px 6px}
-		.table1 tbody th {color:#fff;font-size:115%;background: #2b6cca url("images/sprites.gif") repeat-x 0 -1400px;padding: 2px 6px}
+		.table1 thead th {color:#fff;font-size:145%;background: #900 url("images/sprites.gif") repeat-x 0 -1300px;padding: 10px 6px}
+		.table1 tbody th {color:#fff;font-size:115%;background: #88b8db url("images/sprites.gif") repeat-x 0 -1400px;padding: 6px}
 		.table1 tbody th.sub {font-size:100%;color:#000;background: #efefef url("images/sprites.gif") repeat-x 0 -1500px;padding: 6px}
 
 	/* TABLES - calendar */
@@ -203,43 +214,43 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 		p.note {margin: 1em;border: 1px solid #ddd;background: #f0f0f0;padding: 1em}
 
 /* LAYOUT TYPE B */
-	#type-b #content-wrap {background: #fff}
-	#type-b #content {margin: 0 25px 0 205px;padding-top:10px}
+	#type-b #content-wrap {background: transparent url("images/content_wrap_bg.gif") repeat-y 30px 0}
+	#type-b #content {margin: 0 23px 0 235px}
 
 /* LAYOUT TYPE C */
-	#type-c #content-wrap {background: #fff}
-	#type-c #content {margin: 0 220px 0 205px;padding-top:10px}
+	#type-c #content-wrap {background: transparent url("images/content_wrap_bg.gif") repeat-y 30px 0}
+	#type-c #content {margin: 0 25% 0 235px}
 
 /* LAYOUT TYPE D */
-	#type-d #content {margin: 0 220px 0 25px}
+	#type-d #content {margin: 0 25% 0 50px}
 
 /* LAYOUT TYPE E */
-	#type-e #content-wrap {background: #fff}
-	#type-e #utility {top:0;left:auto;right:18px}
-	#type-e #content {margin: 0 210px 0 25px}
+	#type-e #content-wrap {background: transparent url("images/content_wrap_e_bg.gif") repeat-y 100% 0}
+	#type-e #utility {position:absolute;top:0;left:auto;right:25px;width:165px;border-top: 5px solid #999}
+	#type-e #content {margin: 0 243px 0 50px}
 
 /* LAYOUT TYPE F */
-	#type-f #content-wrap {background: #fff}
-	#type-f #content {margin: 0 210px 0 215px}
-		#type-f #utility {left:auto;right:18px}
-		#type-f #sidebar {right:auto;left:18px}
+	#type-f #content-wrap {background: transparent url("images/content_wrap_e_bg.gif") repeat-y 100% 0}
+	#type-f #content {margin: 0 235px 0 25%}
+		#type-f #utility {left:auto;right:25px}
+		#type-f #sidebar {right:auto;left:25px}
 
 /* SECONDARY NAVIGATION - vertical navigation */
 	#nav-secondary, #nav-secondary ul {position:static}
-	#nav-secondary, #nav-secondary li {list-style: none;margin:0;padding:0;background:#1855ad}
-	#nav-secondary {padding-top:0;margin-top:0}
-	#nav-secondary a {line-height:1.8;padding: 5px 0 5px 23px;background: #1855ad url("images/sprites.gif") no-repeat 10px -695px;font: bold 86% arial;display:block}
+	#nav-secondary, #nav-secondary li {list-style: none;margin:0;padding:0;background:#fff}
+	#nav-secondary {padding-top:0;border-top: 1px solid #ccc;margin-top: 1px}
+	#nav-secondary a {line-height:1.8;padding: 5px 0 5px 23px;background: #fff url("images/sprites.gif") no-repeat 10px -695px;font: bold 86% arial;display:block}
 	#nav-secondary a, #nav-secondary a:link, #nav-secondary a:visited, #nav-secondary a:hover, #nav-secondary a:active {text-decoration:none;cursor:pointer} 
-	#nav-secondary a:link {color:#fff} 
-	#nav-secondary a:visited {color:#fff} 
-	#nav-secondary a:hover {color:#fff;background: #3d77cc url("images/sprites.gif") no-repeat 10px -695px} 
-	#nav-secondary li.active a:link, #nav-secondary li.active a:visited, #nav-secondary li.active a:hover, #nav-secondary li.active a:active {color:#fff} 
-	#nav-secondary li {border-top: 1px solid #fff;border-bottom: 1px solid #1855ad}
+	#nav-secondary a:link {color:#000} 
+	#nav-secondary a:visited {color:#000} 
+	#nav-secondary a:hover {color:#c00;background: #fee url("images/sprites.gif") no-repeat 10px -695px} 
+	#nav-secondary li.active a:link, #nav-secondary li.active a:visited, #nav-secondary li.active a:hover, #nav-secondary li.active a:active {color:#c00} 
+	#nav-secondary li {border-top: 1px solid #fff;border-bottom: 1px solid #ccc}
 
 /* SECONDARY NAVIGATION - 2nd TIER */
 	#nav-secondary ul {margin: 0 0 1em 23px;padding:0}
-	#nav-secondary li.active li a, #nav-secondary li.active li a:link, #nav-secondary li.active li a:visited {line-height:1.5;background: #1855ad url("images/sprites.gif") no-repeat 0 -798px;padding:0 0 0 12px;font-weight:normal;width:auto;color:#fff;width:130px;display:block}
-	#nav-secondary li.active li a:hover, #nav-secondary li.active li a:active {color: #fff;text-decoration:underline}
+	#nav-secondary li.active li a, #nav-secondary li.active li a:link, #nav-secondary li.active li a:visited {line-height:1.5;background: #fff url("images/sprites.gif") no-repeat 0 -798px;padding:0 0 0 12px;font-weight:normal;width:auto;color:#000;width:130px;display:block}
+	#nav-secondary li.active li a:hover, #nav-secondary li.active li a:active {color: #c00}
 	#nav-secondary li.active li {border: none;margin:0}
 	
 	#nav-secondary li.active li.active a:link, 
