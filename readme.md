@@ -4,7 +4,8 @@ Mollio is a simple set of open source html/css templates, released in 2006 by
 [Daemon Internet Consultants](http://www.daemon.com.au). The aim was to create a set of page templates that use 
 css for layout **as well as** some sample basic content which has also had some css applied.
 
-[See Mollio in action.](http://mollio.org)
+- [See Mollio in action.](http://mollio.org)
+- let us know what you think at the [Daemon Labs](http://labs.daemon.com.au) forum
 
 ## Can I use it on my own project?
 
